@@ -1,3 +1,9 @@
+:root {
+  color: #333333;
+  font-size: 62.5%;
+  --error: #da291c;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +13,81 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main {
+  display: block;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.subtitle {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+label .required {
+  color: red;
+}
+
+.input p {
+  margin-top: 0.3rem;
+}
+
+input[type=text] {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+p.error {
+  color: var(--error);
+}
+
+input.error {
+  border: 1px solid var(--error);
+}
+
+@media only screen and (min-width: 780px) {
+  main {
+    width: 600px;
+  }
+
+  h1, .subtitle {
+    text-align: left;
+  }
+
+  .formField {
+    display: flex;
+  }
+
+  label {
+    width: 15rem;
+  }
+
+  .input + .input {
+    margin-left: 1rem;
+  }
+
+  button {
+    width: auto;
+    margin-left: 15rem;
+  }
 }
